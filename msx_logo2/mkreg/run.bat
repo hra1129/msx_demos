@@ -1,0 +1,2 @@
+python mkreg.py
+pause
