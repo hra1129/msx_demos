@@ -58,7 +58,7 @@ Programmed by t.hara
 00401f: cd 5f 00
 
 [	LD HL , INITIAL_PALETTE] Z80:11cyc, R800:3cyc
-004022: 21 32 41
+004022: 21 34 41
 
 [	CALL SET_PALETTE] Z80:18cyc, R800:5cyc
 004025: cd e6 40
@@ -154,7 +154,7 @@ Programmed by t.hara
 004071: cd 56 00
 
 [	LD HL , SPRITE_ATTRIBUTE] Z80:11cyc, R800:3cyc
-004074: 21 52 41
+004074: 21 54 41
 
 [	LD DE , 0X7600] Z80:11cyc, R800:3cyc
 004077: 11 00 76
@@ -423,101 +423,107 @@ Programmed by t.hara
 [	EX DE , HL] Z80:5cyc, R800:1cyc
 0040fc: eb
 
+[	DI] Z80:5cyc, R800:2cyc
+0040fd: f3
+
 [	LD A , 0X00 | 36] Z80:8cyc, R800:2cyc
-0040fd: 3e 24
+0040fe: 3e 24
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-0040ff: d3 99
+004100: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-004101: 3e 91
+004102: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004103: d3 99
+004104: d3 99
 
 [	LD C , VDP_PORT3] Z80:8cyc, R800:2cyc
-004105: 0e 9b
+004106: 0e 9b
 
 [	LD A , [ DE ]] Z80:8cyc, R800:4cyc
-004107: 1a
+004108: 1a
 
 [	INC DE] Z80:7cyc, R800:1cyc
-004108: 13
+004109: 13
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004109: ed a3
+00410a: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00410b: ed a3
+00410c: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00410d: ed a3
+00410e: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00410f: ed a3
+004110: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004111: ed a3
+004112: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004113: ed a3
+004114: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004115: ed a3
+004116: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004117: ed a3
+004118: ed a3
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-004119: ed 79
+00411a: ed 79
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00411b: ed a3
+00411c: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00411d: ed a3
+00411e: ed a3
 
 [	LD A , 0X80 | 44] Z80:8cyc, R800:2cyc
-00411f: 3e ac
+004120: 3e ac
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004121: d3 99
+004122: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-004123: 3e 91
+004124: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004125: d3 99
+004126: d3 99
 
 [	EX DE , HL] Z80:5cyc, R800:1cyc
-004127: eb
+004128: eb
 
 [	POP DE] Z80:11cyc, R800:5cyc
-004128: d1
-
-[	DEC DE] Z80:7cyc, R800:1cyc
-004129: 1b
-
-[LOOP :]
-	label address: 0x00412a
+004129: d1
 
 [	DEC DE] Z80:7cyc, R800:1cyc
 00412a: 1b
 
+[LOOP :]
+	label address: 0x00412b
+
+[	DEC DE] Z80:7cyc, R800:1cyc
+00412b: 1b
+
 [	LD A , E] Z80:5cyc, R800:2cyc
-00412b: 7b
+00412c: 7b
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00412c: ed a3
+00412d: ed a3
 
 [	OR A , D] Z80:5cyc, R800:1cyc
-00412e: b2
+00412f: b2
 
 [	JR NZ , LOOP] Z80:13cyc(cond=true), 8cyc(cond=false), R800:3cyc(cond=true), 2cyc(cond=false)
-00412f: 20 f9
+004130: 20 f9
+
+[	EI] Z80:5cyc, R800:1cyc
+004132: fb
 
 [	RET] Z80:11cyc, R800:5cyc
-004131: c9
+004133: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -525,192 +531,192 @@ Programmed by t.hara
 Define macro {PALETTE MACRO VR , VG , VB}
 
 [INITIAL_PALETTE :]
-	label address: 0x004132
+	label address: 0x004134
 
 ((PALETTE 0 , 0 , 0))
 	Scope path: @MACRO0:
-[	DB ( 0 << 4 ) | 0]
-004132: 00
-
-[	DB 0]
-004133: 00
-
-((PALETTE 0 , 0 , 0))
-	Scope path: @MACRO1:
 [	DB ( 0 << 4 ) | 0]
 004134: 00
 
 [	DB 0]
 004135: 00
 
+((PALETTE 0 , 0 , 0))
+	Scope path: @MACRO1:
+[	DB ( 0 << 4 ) | 0]
+004136: 00
+
+[	DB 0]
+004137: 00
+
 ((PALETTE 1 , 6 , 1))
 	Scope path: @MACRO2:
 [	DB ( 1 << 4 ) | 1]
-004136: 11
+004138: 11
 
 [	DB 6]
-004137: 06
+004139: 06
 
 ((PALETTE 3 , 7 , 3))
 	Scope path: @MACRO3:
 [	DB ( 3 << 4 ) | 3]
-004138: 33
+00413a: 33
 
 [	DB 7]
-004139: 07
+00413b: 07
 
 ((PALETTE 0 , 2 , 7))
 	Scope path: @MACRO4:
 [	DB ( 0 << 4 ) | 7]
-00413a: 07
+00413c: 07
 
 [	DB 2]
-00413b: 02
+00413d: 02
 
 ((PALETTE 2 , 3 , 7))
 	Scope path: @MACRO5:
 [	DB ( 2 << 4 ) | 7]
-00413c: 27
+00413e: 27
 
 [	DB 3]
-00413d: 03
+00413f: 03
 
 ((PALETTE 5 , 1 , 1))
 	Scope path: @MACRO6:
 [	DB ( 5 << 4 ) | 1]
-00413e: 51
+004140: 51
 
 [	DB 1]
-00413f: 01
+004141: 01
 
 ((PALETTE 2 , 6 , 7))
 	Scope path: @MACRO7:
 [	DB ( 2 << 4 ) | 7]
-004140: 27
+004142: 27
 
 [	DB 6]
-004141: 06
+004143: 06
 
 ((PALETTE 7 , 1 , 1))
 	Scope path: @MACRO8:
 [	DB ( 7 << 4 ) | 1]
-004142: 71
+004144: 71
 
 [	DB 1]
-004143: 01
+004145: 01
 
 ((PALETTE 7 , 3 , 3))
 	Scope path: @MACRO9:
 [	DB ( 7 << 4 ) | 3]
-004144: 73
+004146: 73
 
 [	DB 3]
-004145: 03
+004147: 03
 
 ((PALETTE 6 , 6 , 1))
 	Scope path: @MACRO10:
 [	DB ( 6 << 4 ) | 1]
-004146: 61
-
-[	DB 6]
-004147: 06
-
-((PALETTE 6 , 6 , 3))
-	Scope path: @MACRO11:
-[	DB ( 6 << 4 ) | 3]
-004148: 63
+004148: 61
 
 [	DB 6]
 004149: 06
 
+((PALETTE 6 , 6 , 3))
+	Scope path: @MACRO11:
+[	DB ( 6 << 4 ) | 3]
+00414a: 63
+
+[	DB 6]
+00414b: 06
+
 ((PALETTE 1 , 4 , 1))
 	Scope path: @MACRO12:
 [	DB ( 1 << 4 ) | 1]
-00414a: 11
+00414c: 11
 
 [	DB 4]
-00414b: 04
+00414d: 04
 
 ((PALETTE 3 , 3 , 3))
 	Scope path: @MACRO13:
 [	DB ( 3 << 4 ) | 3]
-00414c: 33
+00414e: 33
 
 [	DB 3]
-00414d: 03
+00414f: 03
 
 ((PALETTE 5 , 5 , 5))
 	Scope path: @MACRO14:
 [	DB ( 5 << 4 ) | 5]
-00414e: 55
+004150: 55
 
 [	DB 5]
-00414f: 05
+004151: 05
 
 ((PALETTE 7 , 7 , 7))
 	Scope path: @MACRO15:
 [	DB ( 7 << 4 ) | 7]
-004150: 77
+004152: 77
 
 [	DB 7]
-004151: 07
+004153: 07
 
 [SPRITE_ATTRIBUTE ::]
-	global label address: 0x004152
+	global label address: 0x004154
 
 [	DB 0 , 0 , 0 , 0]
-004152: 00 00 00 00
+004154: 00 00 00 00
 
 [	DB 0 , 0 , 0 , 0]
-004156: 00 00 00 00
+004158: 00 00 00 00
 
 [	DB 32 , 0 , 0 , 0]
-00415a: 20 00 00 00
+00415c: 20 00 00 00
 
 [	DB 32 , 0 , 0 , 0]
-00415e: 20 00 00 00
+004160: 20 00 00 00
 
 [	DB 64 , 0 , 0 , 0]
-004162: 40 00 00 00
+004164: 40 00 00 00
 
 [	DB 64 , 0 , 0 , 0]
-004166: 40 00 00 00
+004168: 40 00 00 00
 
 [	DB 96 , 0 , 0 , 0]
-00416a: 60 00 00 00
+00416c: 60 00 00 00
 
 [	DB 96 , 0 , 0 , 0]
-00416e: 60 00 00 00
+004170: 60 00 00 00
 
 [	DB 128 , 0 , 0 , 0]
-004172: 80 00 00 00
+004174: 80 00 00 00
 
 [	DB 128 , 0 , 0 , 0]
-004176: 80 00 00 00
+004178: 80 00 00 00
 
 [	DB 160 , 0 , 0 , 0]
-00417a: a0 00 00 00
+00417c: a0 00 00 00
 
 [	DB 160 , 0 , 0 , 0]
-00417e: a0 00 00 00
+004180: a0 00 00 00
 
 [	DB 192 , 0 , 0 , 0]
-004182: c0 00 00 00
+004184: c0 00 00 00
 
 [	DB 192 , 0 , 0 , 0]
-004186: c0 00 00 00
+004188: c0 00 00 00
 
 [	DB 224 , 0 , 0 , 0]
-00418a: e0 00 00 00
+00418c: e0 00 00 00
 
 [	DB 224 , 0 , 0 , 0]
-00418e: e0 00 00 00
+004190: e0 00 00 00
 
 [SPRITE_ATTRIBUTE_END ::]
-	global label address: 0x004192
+	global label address: 0x004194
 
 [ALIGN 256]
-	Padding: 110byte(s)
+	Padding: 108byte(s)
 
 [SCROLL_DATA ::]
 	global label address: 0x004200
@@ -52801,7 +52807,7 @@ HMMC_MSX_LOGO 33280 ( 0x8200 )
 H_KEYI 64922 ( 0xfd9a )
 H_KEYI_ROUTINE 16575 ( 0x40bf )
 H_KEYI_ROUTINE:WAIT_HSYNC 16586 ( 0x40ca )
-INITIAL_PALETTE 16690 ( 0x4132 )
+INITIAL_PALETTE 16692 ( 0x4134 )
 INIT_SLOT 16535 ( 0x4097 )
 INIT_SLOT:BASIC_SLOT 16566 ( 0x40b6 )
 INIT_SLOT:EXIT 16567 ( 0x40b7 )
@@ -52880,10 +52886,10 @@ SCROLL_DATA_END 33280 ( 0x8200 )
 SCROLL_DATA_PTR 49152 ( 0xc000 )
 SET_PALETTE 16614 ( 0x40e6 )
 SLTTBL 64709 ( 0xfcc5 )
-SPRITE_ATTRIBUTE 16722 ( 0x4152 )
-SPRITE_ATTRIBUTE_END 16786 ( 0x4192 )
+SPRITE_ATTRIBUTE 16724 ( 0x4154 )
+SPRITE_ATTRIBUTE_END 16788 ( 0x4194 )
 VDP_COMMAND_HMMC 16629 ( 0x40f5 )
-VDP_COMMAND_HMMC:LOOP 16682 ( 0x412a )
+VDP_COMMAND_HMMC:LOOP 16683 ( 0x412b )
 VDP_PORT0 152 ( 0x98 )
 VDP_PORT1 153 ( 0x99 )
 VDP_PORT2 154 ( 0x9a )

@@ -224,6 +224,7 @@ vdp_command_hmmc::
 			ex			de, hl
 
 			; VDP R#17 = R#36 (オートインクリメント)
+			di
 			ld			a, 0x00 | 36
 			out			[vdp_port1], a
 			ld			a, 0x80 | 17
@@ -260,6 +261,7 @@ vdp_command_hmmc::
 			outi
 			or			a, d
 			jr			nz, loop
+			ei
 			ret
 			endscope
 
