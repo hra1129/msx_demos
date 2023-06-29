@@ -97,22 +97,22 @@ Programmed by t.hara
 004038: fb
 
 [	LD HL , INITIAL_PALETTE] Z80:11cyc, R800:3cyc
-004039: 21 0a 43
+004039: 21 42 44
 
 [	CALL SET_PALETTE] Z80:18cyc, R800:5cyc
-00403c: cd 19 42
+00403c: cd 51 43
 
 [	LD HL , HMMC_IMAGE1] Z80:11cyc, R800:3cyc
-00403f: 21 39 43
+00403f: 21 71 44
 
 [	LD BC , 64 / 2 * 32] Z80:11cyc, R800:3cyc
 004042: 01 00 04
 
 [	CALL VDP_COMMAND_HMMC] Z80:18cyc, R800:5cyc
-004045: cd 28 42
+004045: cd 60 43
 
 [	CALL MAKEUP_BACKGROUND] Z80:18cyc, R800:5cyc
-004048: cd eb 41
+004048: cd 23 43
 
 [	DI] Z80:5cyc, R800:2cyc
 00404b: f3
@@ -124,7 +124,7 @@ Programmed by t.hara
 00404e: 32 9a fd
 
 [	LD HL , H_KEYI_INTERRUPT] Z80:11cyc, R800:3cyc
-004051: 21 df 41
+004051: 21 17 43
 
 [	LD [ H_KEYI + 1 ] , HL] Z80:17cyc, R800:7cyc
 004054: 22 9b fd
@@ -211,7 +211,7 @@ Programmed by t.hara
 004084: fb
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004085: cd ee 42
+004085: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 004088: ed 5b 04 c0
@@ -220,10 +220,10 @@ Programmed by t.hara
 00408c: 16 00
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-00408e: cd b3 42
+00408e: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004091: cd ee 42
+004091: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 004094: ed 5b 04 c0
@@ -232,10 +232,10 @@ Programmed by t.hara
 004098: 16 10
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-00409a: cd b3 42
+00409a: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-00409d: cd ee 42
+00409d: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040a0: ed 5b 04 c0
@@ -244,10 +244,10 @@ Programmed by t.hara
 0040a4: 16 20
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040a6: cd b3 42
+0040a6: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040a9: cd ee 42
+0040a9: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040ac: ed 5b 04 c0
@@ -256,10 +256,10 @@ Programmed by t.hara
 0040b0: 16 30
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040b2: cd b3 42
+0040b2: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040b5: cd ee 42
+0040b5: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040b8: ed 5b 04 c0
@@ -268,10 +268,10 @@ Programmed by t.hara
 0040bc: 16 40
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040be: cd b3 42
+0040be: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040c1: cd ee 42
+0040c1: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040c4: ed 5b 04 c0
@@ -280,10 +280,10 @@ Programmed by t.hara
 0040c8: 16 50
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040ca: cd b3 42
+0040ca: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040cd: cd ee 42
+0040cd: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040d0: ed 5b 04 c0
@@ -292,10 +292,10 @@ Programmed by t.hara
 0040d4: 16 60
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040d6: cd b3 42
+0040d6: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040d9: cd ee 42
+0040d9: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040dc: ed 5b 04 c0
@@ -304,10 +304,10 @@ Programmed by t.hara
 0040e0: 16 70
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040e2: cd b3 42
+0040e2: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040e5: cd ee 42
+0040e5: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040e8: ed 5b 04 c0
@@ -316,10 +316,10 @@ Programmed by t.hara
 0040ec: 16 80
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040ee: cd b3 42
+0040ee: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040f1: cd ee 42
+0040f1: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 0040f4: ed 5b 04 c0
@@ -328,10 +328,10 @@ Programmed by t.hara
 0040f8: 16 90
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-0040fa: cd b3 42
+0040fa: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0040fd: cd ee 42
+0040fd: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 004100: ed 5b 04 c0
@@ -340,10 +340,10 @@ Programmed by t.hara
 004104: 16 a0
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-004106: cd b3 42
+004106: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004109: cd ee 42
+004109: cd 26 44
 
 [	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
 00410c: ed 5b 04 c0
@@ -352,229 +352,553 @@ Programmed by t.hara
 004110: 16 b0
 
 [	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
-004112: cd b3 42
+004112: cd eb 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004115: cd ee 42
+004115: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004118: ed 5b 04 c0
+
+[	LD D , 192] Z80:8cyc, R800:2cyc
+00411c: 16 c0
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00411e: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004121: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004124: ed 5b 04 c0
+
+[	LD D , 208] Z80:8cyc, R800:2cyc
+004128: 16 d0
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00412a: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+00412d: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004130: ed 5b 04 c0
+
+[	LD D , 224] Z80:8cyc, R800:2cyc
+004134: 16 e0
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+004136: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004139: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+00413c: ed 5b 04 c0
+
+[	LD D , 240] Z80:8cyc, R800:2cyc
+004140: 16 f0
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+004142: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004145: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004148: ed 5b 04 c0
+
+[	LD D , 24] Z80:8cyc, R800:2cyc
+00414c: 16 18
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00414e: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004151: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004154: ed 5b 04 c0
+
+[	LD D , 40] Z80:8cyc, R800:2cyc
+004158: 16 28
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00415a: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+00415d: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004160: ed 5b 04 c0
+
+[	LD D , 56] Z80:8cyc, R800:2cyc
+004164: 16 38
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+004166: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004169: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+00416c: ed 5b 04 c0
+
+[	LD D , 72] Z80:8cyc, R800:2cyc
+004170: 16 48
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+004172: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004175: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004178: ed 5b 04 c0
+
+[	LD D , 88] Z80:8cyc, R800:2cyc
+00417c: 16 58
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00417e: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004181: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004184: ed 5b 04 c0
+
+[	LD D , 104] Z80:8cyc, R800:2cyc
+004188: 16 68
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+00418a: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+00418d: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+004190: ed 5b 04 c0
+
+[	LD D , 120] Z80:8cyc, R800:2cyc
+004194: 16 78
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+004196: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004199: cd 26 44
+
+[	LD DE , [ BALL_Y_D2 ]] Z80:22cyc, R800:8cyc
+00419c: ed 5b 04 c0
+
+[	LD D , 136] Z80:8cyc, R800:2cyc
+0041a0: 16 88
+
+[	CALL ERASE_BALL] Z80:18cyc, R800:5cyc
+0041a2: cd eb 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0041a5: cd 26 44
 
 [	LD B , 0] Z80:8cyc, R800:2cyc
-004118: 06 00
+0041a8: 06 00
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-00411a: ed 5b 01 c0
+0041aa: ed 5b 01 c0
 
 [	LD D , 0] Z80:8cyc, R800:2cyc
-00411e: 16 00
+0041ae: 16 00
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004120: cd 77 42
+0041b0: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004123: cd ee 42
+0041b3: cd 26 44
 
 [	LD B , 16] Z80:8cyc, R800:2cyc
-004126: 06 10
+0041b6: 06 10
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004128: ed 5b 01 c0
+0041b8: ed 5b 01 c0
 
 [	LD D , 16] Z80:8cyc, R800:2cyc
-00412c: 16 10
+0041bc: 16 10
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-00412e: cd 77 42
+0041be: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004131: cd ee 42
+0041c1: cd 26 44
 
 [	LD B , 32] Z80:8cyc, R800:2cyc
-004134: 06 20
+0041c4: 06 20
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004136: ed 5b 01 c0
+0041c6: ed 5b 01 c0
 
 [	LD D , 32] Z80:8cyc, R800:2cyc
-00413a: 16 20
+0041ca: 16 20
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-00413c: cd 77 42
+0041cc: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-00413f: cd ee 42
+0041cf: cd 26 44
 
 [	LD B , 48] Z80:8cyc, R800:2cyc
-004142: 06 30
+0041d2: 06 30
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004144: ed 5b 01 c0
+0041d4: ed 5b 01 c0
 
 [	LD D , 48] Z80:8cyc, R800:2cyc
-004148: 16 30
+0041d8: 16 30
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-00414a: cd 77 42
+0041da: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-00414d: cd ee 42
+0041dd: cd 26 44
 
 [	LD B , 0] Z80:8cyc, R800:2cyc
-004150: 06 00
+0041e0: 06 00
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004152: ed 5b 01 c0
+0041e2: ed 5b 01 c0
 
 [	LD D , 64] Z80:8cyc, R800:2cyc
-004156: 16 40
+0041e6: 16 40
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004158: cd 77 42
+0041e8: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-00415b: cd ee 42
+0041eb: cd 26 44
 
 [	LD B , 16] Z80:8cyc, R800:2cyc
-00415e: 06 10
+0041ee: 06 10
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004160: ed 5b 01 c0
+0041f0: ed 5b 01 c0
 
 [	LD D , 80] Z80:8cyc, R800:2cyc
-004164: 16 50
+0041f4: 16 50
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004166: cd 77 42
+0041f6: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004169: cd ee 42
+0041f9: cd 26 44
 
 [	LD B , 32] Z80:8cyc, R800:2cyc
-00416c: 06 20
+0041fc: 06 20
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-00416e: ed 5b 01 c0
+0041fe: ed 5b 01 c0
 
 [	LD D , 96] Z80:8cyc, R800:2cyc
-004172: 16 60
+004202: 16 60
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004174: cd 77 42
+004204: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004177: cd ee 42
+004207: cd 26 44
 
 [	LD B , 48] Z80:8cyc, R800:2cyc
-00417a: 06 30
+00420a: 06 30
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-00417c: ed 5b 01 c0
+00420c: ed 5b 01 c0
 
 [	LD D , 112] Z80:8cyc, R800:2cyc
-004180: 16 70
+004210: 16 70
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004182: cd 77 42
+004212: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004185: cd ee 42
+004215: cd 26 44
 
 [	LD B , 0] Z80:8cyc, R800:2cyc
-004188: 06 00
+004218: 06 00
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-00418a: ed 5b 01 c0
+00421a: ed 5b 01 c0
 
 [	LD D , 128] Z80:8cyc, R800:2cyc
-00418e: 16 80
+00421e: 16 80
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-004190: cd 77 42
+004220: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004193: cd ee 42
+004223: cd 26 44
 
 [	LD B , 16] Z80:8cyc, R800:2cyc
-004196: 06 10
+004226: 06 10
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-004198: ed 5b 01 c0
+004228: ed 5b 01 c0
 
 [	LD D , 144] Z80:8cyc, R800:2cyc
-00419c: 16 90
+00422c: 16 90
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-00419e: cd 77 42
+00422e: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041a1: cd ee 42
+004231: cd 26 44
 
 [	LD B , 32] Z80:8cyc, R800:2cyc
-0041a4: 06 20
+004234: 06 20
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-0041a6: ed 5b 01 c0
+004236: ed 5b 01 c0
 
 [	LD D , 160] Z80:8cyc, R800:2cyc
-0041aa: 16 a0
+00423a: 16 a0
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-0041ac: cd 77 42
+00423c: cd af 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041af: cd ee 42
+00423f: cd 26 44
 
 [	LD B , 48] Z80:8cyc, R800:2cyc
-0041b2: 06 30
+004242: 06 30
 
 [	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
-0041b4: ed 5b 01 c0
+004244: ed 5b 01 c0
 
 [	LD D , 176] Z80:8cyc, R800:2cyc
-0041b8: 16 b0
+004248: 16 b0
 
 [	CALL PUT_BALL] Z80:18cyc, R800:5cyc
-0041ba: cd 77 42
+00424a: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+00424d: cd 26 44
+
+[	LD B , 32] Z80:8cyc, R800:2cyc
+004250: 06 20
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+004252: ed 5b 01 c0
+
+[	LD D , 192] Z80:8cyc, R800:2cyc
+004256: 16 c0
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+004258: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+00425b: cd 26 44
+
+[	LD B , 32] Z80:8cyc, R800:2cyc
+00425e: 06 20
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+004260: ed 5b 01 c0
+
+[	LD D , 208] Z80:8cyc, R800:2cyc
+004264: 16 d0
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+004266: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004269: cd 26 44
+
+[	LD B , 48] Z80:8cyc, R800:2cyc
+00426c: 06 30
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+00426e: ed 5b 01 c0
+
+[	LD D , 224] Z80:8cyc, R800:2cyc
+004272: 16 e0
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+004274: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004277: cd 26 44
+
+[	LD B , 48] Z80:8cyc, R800:2cyc
+00427a: 06 30
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+00427c: ed 5b 01 c0
+
+[	LD D , 240] Z80:8cyc, R800:2cyc
+004280: 16 f0
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+004282: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004285: cd 26 44
+
+[	LD B , 48] Z80:8cyc, R800:2cyc
+004288: 06 30
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+00428a: ed 5b 01 c0
+
+[	LD D , 24] Z80:8cyc, R800:2cyc
+00428e: 16 18
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+004290: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+004293: cd 26 44
+
+[	LD B , 0] Z80:8cyc, R800:2cyc
+004296: 06 00
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+004298: ed 5b 01 c0
+
+[	LD D , 40] Z80:8cyc, R800:2cyc
+00429c: 16 28
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+00429e: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042a1: cd 26 44
+
+[	LD B , 16] Z80:8cyc, R800:2cyc
+0042a4: 06 10
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042a6: ed 5b 01 c0
+
+[	LD D , 56] Z80:8cyc, R800:2cyc
+0042aa: 16 38
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042ac: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042af: cd 26 44
+
+[	LD B , 32] Z80:8cyc, R800:2cyc
+0042b2: 06 20
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042b4: ed 5b 01 c0
+
+[	LD D , 72] Z80:8cyc, R800:2cyc
+0042b8: 16 48
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042ba: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042bd: cd 26 44
+
+[	LD B , 48] Z80:8cyc, R800:2cyc
+0042c0: 06 30
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042c2: ed 5b 01 c0
+
+[	LD D , 88] Z80:8cyc, R800:2cyc
+0042c6: 16 58
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042c8: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042cb: cd 26 44
+
+[	LD B , 0] Z80:8cyc, R800:2cyc
+0042ce: 06 00
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042d0: ed 5b 01 c0
+
+[	LD D , 104] Z80:8cyc, R800:2cyc
+0042d4: 16 68
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042d6: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042d9: cd 26 44
+
+[	LD B , 16] Z80:8cyc, R800:2cyc
+0042dc: 06 10
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042de: ed 5b 01 c0
+
+[	LD D , 120] Z80:8cyc, R800:2cyc
+0042e2: 16 78
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042e4: cd af 43
+
+[	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
+0042e7: cd 26 44
+
+[	LD B , 32] Z80:8cyc, R800:2cyc
+0042ea: 06 20
+
+[	LD DE , [ BALL_Y ]] Z80:22cyc, R800:8cyc
+0042ec: ed 5b 01 c0
+
+[	LD D , 136] Z80:8cyc, R800:2cyc
+0042f0: 16 88
+
+[	CALL PUT_BALL] Z80:18cyc, R800:5cyc
+0042f2: cd af 43
 
 [	LD A , [ BALL_Y_D1 ]] Z80:14cyc, R800:6cyc
-0041bd: 3a 03 c0
+0042f5: 3a 03 c0
 
 [	LD [ BALL_Y_D2 ] , A] Z80:14cyc, R800:6cyc
-0041c0: 32 04 c0
+0042f8: 32 04 c0
 
 [	LD A , [ BALL_Y ]] Z80:14cyc, R800:6cyc
-0041c3: 3a 01 c0
+0042fb: 3a 01 c0
 
 [	LD [ BALL_Y_D1 ] , A] Z80:14cyc, R800:6cyc
-0041c6: 32 03 c0
+0042fe: 32 03 c0
 
 [	INC A] Z80:5cyc, R800:1cyc
-0041c9: 3c
+004301: 3c
 
 [	CP A , 128] Z80:8cyc, R800:2cyc
-0041ca: fe 80
+004302: fe 80
 
 [	JP C , SKIP_BALL] Z80:11cyc, R800:5cyc(cond=true), 3cyc(cond=false)
-0041cc: da d1 41
+004304: da 09 43
 
 [	LD A , 16] Z80:8cyc, R800:2cyc
-0041cf: 3e 10
+004307: 3e 10
 
 [SKIP_BALL :]
-	label address: 0x0041d1
+	label address: 0x004309
 
 [	LD [ BALL_Y ] , A] Z80:14cyc, R800:6cyc
-0041d1: 32 01 c0
+004309: 32 01 c0
 
 [	LD A , [ DRAW_PAGE ]] Z80:14cyc, R800:6cyc
-0041d4: 3a 00 c0
+00430c: 3a 00 c0
 
 [	XOR A , 1] Z80:8cyc, R800:2cyc
-0041d7: ee 01
+00430f: ee 01
 
 [	LD [ DRAW_PAGE ] , A] Z80:14cyc, R800:6cyc
-0041d9: 32 00 c0
+004311: 32 00 c0
 
 [	JP MAIN_LOOP] Z80:11cyc, R800:5cyc
-0041dc: c3 6d 40
+004314: c3 6d 40
 
 [	ENDSCOPE]
 	Scope path: 
@@ -583,28 +907,28 @@ Programmed by t.hara
 	Scope path: H_KEYI_INTERRUPT:
 
 [H_KEYI_INTERRUPT ::]
-	global label address: 0x0041df
+	global label address: 0x004317
 
 [	IN A , [ VDP_PORT1 ]] Z80:12cyc, R800:10 or 9cyc
-0041df: db 99
+004317: db 99
 
 [	OR A , A] Z80:5cyc, R800:1cyc
-0041e1: b7
+004319: b7
 
 [	RET P] Z80:12cyc(branch), 6cyc(through), R800:5cyc(branch), 1cyc(through)
-0041e2: f0
+00431a: f0
 
 [	LD HL , [ JIFFY ]] Z80:17cyc, R800:7cyc
-0041e3: 2a 9e fc
+00431b: 2a 9e fc
 
 [	INC HL] Z80:7cyc, R800:1cyc
-0041e6: 23
+00431e: 23
 
 [	LD [ JIFFY ] , HL] Z80:17cyc, R800:7cyc
-0041e7: 22 9e fc
+00431f: 22 9e fc
 
 [	RET] Z80:11cyc, R800:5cyc
-0041ea: c9
+004322: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -613,55 +937,55 @@ Programmed by t.hara
 	Scope path: MAKEUP_BACKGROUND:
 
 [MAKEUP_BACKGROUND ::]
-	global label address: 0x0041eb
+	global label address: 0x004323
 
 [	LD HL , HMMV_CLEAR] Z80:11cyc, R800:3cyc
-0041eb: 21 2a 43
+004323: 21 62 44
 
 [	CALL VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041ee: cd 67 42
+004326: cd 9f 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041f1: cd ee 42
+004329: cd 26 44
 
 [	LD HL , HMMM_HTRANS] Z80:11cyc, R800:3cyc
-0041f4: 21 43 47
+00432c: 21 7b 48
 
 [	CALL VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041f7: cd 67 42
+00432f: cd 9f 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-0041fa: cd ee 42
+004332: cd 26 44
 
 [	LD HL , YMMM_VTRANS] Z80:11cyc, R800:3cyc
-0041fd: 21 52 47
+004335: 21 8a 48
 
 [	CALL VDP_COMMAND] Z80:18cyc, R800:5cyc
-004200: cd 67 42
+004338: cd 9f 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004203: cd ee 42
+00433b: cd 26 44
 
 [	LD HL , YMMM_PAGE0] Z80:11cyc, R800:3cyc
-004206: 21 61 47
+00433e: 21 99 48
 
 [	CALL VDP_COMMAND] Z80:18cyc, R800:5cyc
-004209: cd 67 42
+004341: cd 9f 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-00420c: cd ee 42
+004344: cd 26 44
 
 [	LD HL , YMMM_PAGE1] Z80:11cyc, R800:3cyc
-00420f: 21 70 47
+004347: 21 a8 48
 
 [	CALL VDP_COMMAND] Z80:18cyc, R800:5cyc
-004212: cd 67 42
+00434a: cd 9f 43
 
 [	CALL WAIT_COMPLETE_VDP_COMMAND] Z80:18cyc, R800:5cyc
-004215: cd ee 42
+00434d: cd 26 44
 
 [	RET] Z80:11cyc, R800:5cyc
-004218: c9
+004350: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -670,34 +994,34 @@ Programmed by t.hara
 	Scope path: SET_PALETTE:
 
 [SET_PALETTE ::]
-	global label address: 0x004219
+	global label address: 0x004351
 
 [	XOR A , A] Z80:5cyc, R800:1cyc
-004219: af
+004351: af
 
 [	DI] Z80:5cyc, R800:2cyc
-00421a: f3
+004352: f3
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00421b: d3 99
+004353: d3 99
 
 [	LD A , 0X80 | 16] Z80:8cyc, R800:2cyc
-00421d: 3e 90
+004355: 3e 90
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00421f: d3 99
+004357: d3 99
 
 [	EI] Z80:5cyc, R800:1cyc
-004221: fb
+004359: fb
 
 [	LD BC , ( 32 << 8 ) | VDP_PORT2] Z80:11cyc, R800:3cyc
-004222: 01 9a 20
+00435a: 01 9a 20
 
 [	OTIR] Z80:23 or 18cyc, R800:? or 12 or 11cyc
-004225: ed b3
+00435d: ed b3
 
 [	RET] Z80:11cyc, R800:5cyc
-004227: c9
+00435f: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -706,127 +1030,127 @@ Programmed by t.hara
 	Scope path: VDP_COMMAND_HMMC:
 
 [VDP_COMMAND_HMMC ::]
-	global label address: 0x004228
+	global label address: 0x004360
 
 [	PUSH BC] Z80:12cyc, R800:6cyc
-004228: c5
+004360: c5
 
 [	LD E , L] Z80:5cyc, R800:2cyc
-004229: 5d
+004361: 5d
 
 [	LD D , H] Z80:5cyc, R800:2cyc
-00422a: 54
+004362: 54
 
 [	LD BC , 10] Z80:11cyc, R800:3cyc
-00422b: 01 0a 00
+004363: 01 0a 00
 
 [	ADD HL , BC] Z80:12cyc, R800:1cyc
-00422e: 09
+004366: 09
 
 [	EX DE , HL] Z80:5cyc, R800:1cyc
-00422f: eb
+004367: eb
 
 [	DI] Z80:5cyc, R800:2cyc
-004230: f3
+004368: f3
 
 [	LD A , 0X00 | 36] Z80:8cyc, R800:2cyc
-004231: 3e 24
+004369: 3e 24
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004233: d3 99
+00436b: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-004235: 3e 91
+00436d: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004237: d3 99
+00436f: d3 99
 
 [	LD C , VDP_PORT3] Z80:8cyc, R800:2cyc
-004239: 0e 9b
+004371: 0e 9b
 
 [	LD A , [ DE ]] Z80:8cyc, R800:4cyc
-00423b: 1a
+004373: 1a
 
 [	INC DE] Z80:7cyc, R800:1cyc
-00423c: 13
+004374: 13
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00423d: ed a3
+004375: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00423f: ed a3
+004377: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004241: ed a3
+004379: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004243: ed a3
+00437b: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004245: ed a3
+00437d: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004247: ed a3
+00437f: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004249: ed a3
+004381: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00424b: ed a3
+004383: ed a3
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-00424d: ed 79
+004385: ed 79
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00424f: ed a3
+004387: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004251: ed a3
+004389: ed a3
 
 [	LD A , 0X80 | 44] Z80:8cyc, R800:2cyc
-004253: 3e ac
+00438b: 3e ac
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004255: d3 99
+00438d: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-004257: 3e 91
+00438f: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-004259: d3 99
+004391: d3 99
 
 [	EX DE , HL] Z80:5cyc, R800:1cyc
-00425b: eb
+004393: eb
 
 [	POP DE] Z80:11cyc, R800:5cyc
-00425c: d1
+004394: d1
 
 [	DEC DE] Z80:7cyc, R800:1cyc
-00425d: 1b
+004395: 1b
 
 [LOOP :]
-	label address: 0x00425e
+	label address: 0x004396
 
 [	DEC DE] Z80:7cyc, R800:1cyc
-00425e: 1b
+004396: 1b
 
 [	LD A , E] Z80:5cyc, R800:2cyc
-00425f: 7b
+004397: 7b
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004260: ed a3
+004398: ed a3
 
 [	OR A , D] Z80:5cyc, R800:1cyc
-004262: b2
+00439a: b2
 
 [	JR NZ , LOOP] Z80:13cyc(cond=true), 8cyc(cond=false), R800:3cyc(cond=true), 2cyc(cond=false)
-004263: 20 f9
+00439b: 20 f9
 
 [	EI] Z80:5cyc, R800:1cyc
-004265: fb
+00439d: fb
 
 [	RET] Z80:11cyc, R800:5cyc
-004266: c9
+00439e: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -835,34 +1159,34 @@ Programmed by t.hara
 	Scope path: VDP_COMMAND:
 
 [VDP_COMMAND ::]
-	global label address: 0x004267
+	global label address: 0x00439f
 
 [	DI] Z80:5cyc, R800:2cyc
-004267: f3
+00439f: f3
 
 [	LD A , 0X00 | 32] Z80:8cyc, R800:2cyc
-004268: 3e 20
+0043a0: 3e 20
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00426a: d3 99
+0043a2: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-00426c: 3e 91
+0043a4: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00426e: d3 99
+0043a6: d3 99
 
 [	LD BC , ( 15 << 8 ) | VDP_PORT3] Z80:11cyc, R800:3cyc
-004270: 01 9b 0f
+0043a8: 01 9b 0f
 
 [	OTIR] Z80:23 or 18cyc, R800:? or 12 or 11cyc
-004273: ed b3
+0043ab: ed b3
 
 [	EI] Z80:5cyc, R800:1cyc
-004275: fb
+0043ad: fb
 
 [	RET] Z80:11cyc, R800:5cyc
-004276: c9
+0043ae: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -871,109 +1195,109 @@ Programmed by t.hara
 	Scope path: PUT_BALL:
 
 [PUT_BALL ::]
-	global label address: 0x004277
+	global label address: 0x0043af
 
 [	DI] Z80:5cyc, R800:2cyc
-004277: f3
+0043af: f3
 
 [	LD A , 0X00 | 32] Z80:8cyc, R800:2cyc
-004278: 3e 20
+0043b0: 3e 20
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00427a: d3 99
+0043b2: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-00427c: 3e 91
+0043b4: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-00427e: d3 99
+0043b6: d3 99
 
 [	LD C , VDP_PORT3] Z80:8cyc, R800:2cyc
-004280: 0e 9b
+0043b8: 0e 9b
 
 [	LD HL , LMMM_TPSET] Z80:11cyc, R800:3cyc
-004282: 21 a8 42
+0043ba: 21 e0 43
 
 [	LD A , [ DRAW_PAGE ]] Z80:14cyc, R800:6cyc
-004285: 3a 00 c0
+0043bd: 3a 00 c0
 
 [	OUT [ C ] , B] Z80:14cyc, R800:10 or 9cyc
-004288: ed 41
+0043c0: ed 41
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00428a: ed a3
+0043c2: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00428c: ed a3
+0043c4: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00428e: ed a3
+0043c6: ed a3
 
 [	OUT [ C ] , D] Z80:14cyc, R800:10 or 9cyc
-004290: ed 51
+0043c8: ed 51
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004292: ed a3
+0043ca: ed a3
 
 [	OUT [ C ] , E] Z80:14cyc, R800:10 or 9cyc
-004294: ed 59
+0043cc: ed 59
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-004296: ed 79
+0043ce: ed 79
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-004298: ed a3
+0043d0: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00429a: ed a3
+0043d2: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00429c: ed a3
+0043d4: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-00429e: ed a3
+0043d6: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042a0: ed a3
+0043d8: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042a2: ed a3
+0043da: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042a4: ed a3
+0043dc: ed a3
 
 [	EI] Z80:5cyc, R800:1cyc
-0042a6: fb
+0043de: fb
 
 [	RET] Z80:11cyc, R800:5cyc
-0042a7: c9
+0043df: c9
 
 [LMMM_TPSET :]
-	label address: 0x0042a8
+	label address: 0x0043e0
 
 [	DB 0]
-0042a8: 00
+0043e0: 00
 
 [	DW 512]
-0042a9: 00 02
+0043e1: 00 02
 
 [	DB 0]
-0042ab: 00
+0043e3: 00
 
 [	DW 16]
-0042ac: 10 00
+0043e4: 10 00
 
 [	DW 16]
-0042ae: 10 00
+0043e6: 10 00
 
 [	DB 0]
-0042b0: 00
+0043e8: 00
 
 [	DB 0]
-0042b1: 00
+0043e9: 00
 
 [	DB 0B10011000]
-0042b2: 98
+0043ea: 98
 
 [	ENDSCOPE]
 	Scope path: 
@@ -982,109 +1306,109 @@ Programmed by t.hara
 	Scope path: ERASE_BALL:
 
 [ERASE_BALL ::]
-	global label address: 0x0042b3
+	global label address: 0x0043eb
 
 [	DI] Z80:5cyc, R800:2cyc
-0042b3: f3
+0043eb: f3
 
 [	LD A , 0X00 | 32] Z80:8cyc, R800:2cyc
-0042b4: 3e 20
+0043ec: 3e 20
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-0042b6: d3 99
+0043ee: d3 99
 
 [	LD A , 0X80 | 17] Z80:8cyc, R800:2cyc
-0042b8: 3e 91
+0043f0: 3e 91
 
 [	OUT [ VDP_PORT1 ] , A] Z80:12cyc, R800:10 or 9cyc
-0042ba: d3 99
+0043f2: d3 99
 
 [	LD C , VDP_PORT3] Z80:8cyc, R800:2cyc
-0042bc: 0e 9b
+0043f4: 0e 9b
 
 [	LD HL , HMMM_COPY] Z80:11cyc, R800:3cyc
-0042be: 21 e4 42
+0043f6: 21 1c 44
 
 [	LD A , [ DRAW_PAGE ]] Z80:14cyc, R800:6cyc
-0042c1: 3a 00 c0
+0043f9: 3a 00 c0
 
 [	OUT [ C ] , D] Z80:14cyc, R800:10 or 9cyc
-0042c4: ed 51
+0043fc: ed 51
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042c6: ed a3
+0043fe: ed a3
 
 [	OUT [ C ] , E] Z80:14cyc, R800:10 or 9cyc
-0042c8: ed 59
+004400: ed 59
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042ca: ed a3
+004402: ed a3
 
 [	OUT [ C ] , D] Z80:14cyc, R800:10 or 9cyc
-0042cc: ed 51
+004404: ed 51
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042ce: ed a3
+004406: ed a3
 
 [	OUT [ C ] , E] Z80:14cyc, R800:10 or 9cyc
-0042d0: ed 59
+004408: ed 59
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-0042d2: ed 79
+00440a: ed 79
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042d4: ed a3
+00440c: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042d6: ed a3
+00440e: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042d8: ed a3
+004410: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042da: ed a3
+004412: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042dc: ed a3
+004414: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042de: ed a3
+004416: ed a3
 
 [	OUTI] Z80:18cyc, R800:12 or 11cyc
-0042e0: ed a3
+004418: ed a3
 
 [	EI] Z80:5cyc, R800:1cyc
-0042e2: fb
+00441a: fb
 
 [	RET] Z80:11cyc, R800:5cyc
-0042e3: c9
+00441b: c9
 
 [HMMM_COPY :]
-	label address: 0x0042e4
+	label address: 0x00441c
 
 [	DB 0]
-0042e4: 00
+00441c: 00
 
 [	DB 2]
-0042e5: 02
+00441d: 02
 
 [	DB 0]
-0042e6: 00
+00441e: 00
 
 [	DW 16]
-0042e7: 10 00
+00441f: 10 00
 
 [	DW 16]
-0042e9: 10 00
+004421: 10 00
 
 [	DB 0]
-0042eb: 00
+004423: 00
 
 [	DB 0]
-0042ec: 00
+004424: 00
 
 [	DB 0B11010000]
-0042ed: d0
+004425: d0
 
 [	ENDSCOPE]
 	Scope path: 
@@ -1093,55 +1417,55 @@ Programmed by t.hara
 	Scope path: WAIT_COMPLETE_VDP_COMMAND:
 
 [WAIT_COMPLETE_VDP_COMMAND ::]
-	global label address: 0x0042ee
+	global label address: 0x004426
 
 [	DI] Z80:5cyc, R800:2cyc
-0042ee: f3
+004426: f3
 
 [	LD C , VDP_PORT1] Z80:8cyc, R800:2cyc
-0042ef: 0e 99
+004427: 0e 99
 
 [	LD A , 2] Z80:8cyc, R800:2cyc
-0042f1: 3e 02
+004429: 3e 02
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-0042f3: ed 79
+00442b: ed 79
 
 [	LD A , 0X80 | 15] Z80:8cyc, R800:2cyc
-0042f5: 3e 8f
+00442d: 3e 8f
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-0042f7: ed 79
+00442f: ed 79
 
 [	IN B , [ C ]] Z80:14cyc, R800:10 or 9cyc
-0042f9: ed 40
+004431: ed 40
 
 [	XOR A , A] Z80:5cyc, R800:1cyc
-0042fb: af
+004433: af
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-0042fc: ed 79
+004434: ed 79
 
 [	LD A , 0X80 | 15] Z80:8cyc, R800:2cyc
-0042fe: 3e 8f
+004436: 3e 8f
 
 [	OUT [ C ] , A] Z80:14cyc, R800:10 or 9cyc
-004300: ed 79
+004438: ed 79
 
 [	EI] Z80:5cyc, R800:1cyc
-004302: fb
+00443a: fb
 
 [	LD A , B] Z80:5cyc, R800:2cyc
-004303: 78
+00443b: 78
 
 [	AND A , 1] Z80:8cyc, R800:2cyc
-004304: e6 01
+00443c: e6 01
 
 [	JP NZ , WAIT_COMPLETE_VDP_COMMAND] Z80:11cyc, R800:5cyc(cond=true), 3cyc(cond=false)
-004306: c2 ee 42
+00443e: c2 26 44
 
 [	RET] Z80:11cyc, R800:5cyc
-004309: c9
+004441: c9
 
 [	ENDSCOPE]
 	Scope path: 
@@ -1149,508 +1473,391 @@ Programmed by t.hara
 Define macro {PALETTE MACRO VR , VG , VB}
 
 [INITIAL_PALETTE :]
-	label address: 0x00430a
+	label address: 0x004442
 
 ((PALETTE 0 , 111 , 87))
 	Scope path: @MACRO0:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 87 / 32 )]
-00430a: 02
+004442: 02
 
 [	DB ( 111 / 32 )]
-00430b: 03
+004443: 03
 
 ((PALETTE 0 , 0 , 0))
 	Scope path: @MACRO1:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 0 / 32 )]
-00430c: 00
+004444: 00
 
 [	DB ( 0 / 32 )]
-00430d: 00
+004445: 00
 
 ((PALETTE 12 , 222 , 54))
 	Scope path: @MACRO2:
 [	DB ( ( 12 / 32 ) << 4 ) | ( 54 / 32 )]
-00430e: 01
+004446: 01
 
 [	DB ( 222 / 32 )]
-00430f: 06
+004447: 06
 
 ((PALETTE 128 , 255 , 144))
 	Scope path: @MACRO3:
 [	DB ( ( 128 / 32 ) << 4 ) | ( 144 / 32 )]
-004310: 44
+004448: 44
 
 [	DB ( 255 / 32 )]
-004311: 07
+004449: 07
 
 ((PALETTE 0 , 0 , 255))
 	Scope path: @MACRO4:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 255 / 32 )]
-004312: 07
+00444a: 07
 
 [	DB ( 0 / 32 )]
-004313: 00
+00444b: 00
 
 ((PALETTE 0 , 165 , 255))
 	Scope path: @MACRO5:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 255 / 32 )]
-004314: 07
+00444c: 07
 
 [	DB ( 165 / 32 )]
-004315: 05
+00444d: 05
 
 ((PALETTE 120 , 0 , 0))
 	Scope path: @MACRO6:
 [	DB ( ( 120 / 32 ) << 4 ) | ( 0 / 32 )]
-004316: 30
+00444e: 30
 
 [	DB ( 0 / 32 )]
-004317: 00
+00444f: 00
 
 ((PALETTE 0 , 225 , 255))
 	Scope path: @MACRO7:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 255 / 32 )]
-004318: 07
+004450: 07
 
 [	DB ( 225 / 32 )]
-004319: 07
+004451: 07
 
 ((PALETTE 204 , 0 , 0))
 	Scope path: @MACRO8:
 [	DB ( ( 204 / 32 ) << 4 ) | ( 0 / 32 )]
-00431a: 60
+004452: 60
 
 [	DB ( 0 / 32 )]
-00431b: 00
+004453: 00
 
 ((PALETTE 255 , 105 , 0))
 	Scope path: @MACRO9:
 [	DB ( ( 255 / 32 ) << 4 ) | ( 0 / 32 )]
-00431c: 70
+004454: 70
 
 [	DB ( 105 / 32 )]
-00431d: 03
+004455: 03
 
 ((PALETTE 144 , 108 , 0))
 	Scope path: @MACRO10:
 [	DB ( ( 144 / 32 ) << 4 ) | ( 0 / 32 )]
-00431e: 40
+004456: 40
 
 [	DB ( 108 / 32 )]
-00431f: 03
+004457: 03
 
 ((PALETTE 201 , 174 , 0))
 	Scope path: @MACRO11:
 [	DB ( ( 201 / 32 ) << 4 ) | ( 0 / 32 )]
-004320: 60
+004458: 60
 
 [	DB ( 174 / 32 )]
-004321: 05
+004459: 05
 
 ((PALETTE 0 , 141 , 0))
 	Scope path: @MACRO12:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 0 / 32 )]
-004322: 00
+00445a: 00
 
 [	DB ( 141 / 32 )]
-004323: 04
+00445b: 04
 
 ((PALETTE 255 , 255 , 162))
 	Scope path: @MACRO13:
 [	DB ( ( 255 / 32 ) << 4 ) | ( 162 / 32 )]
-004324: 75
+00445c: 75
 
 [	DB ( 255 / 32 )]
-004325: 07
+00445d: 07
 
 ((PALETTE 0 , 255 , 255))
 	Scope path: @MACRO14:
 [	DB ( ( 0 / 32 ) << 4 ) | ( 255 / 32 )]
-004326: 07
+00445e: 07
 
 [	DB ( 255 / 32 )]
-004327: 07
+00445f: 07
 
 ((PALETTE 255 , 255 , 255))
 	Scope path: @MACRO15:
 [	DB ( ( 255 / 32 ) << 4 ) | ( 255 / 32 )]
-004328: 77
+004460: 77
 
 [	DB ( 255 / 32 )]
-004329: 07
+004461: 07
 
 [HMMV_CLEAR ::]
-	global label address: 0x00432a
+	global label address: 0x004462
 
 [	DW 0]
-00432a: 00 00
+004462: 00 00
 
 [	DW 0]
-00432c: 00 00
+004464: 00 00
 
 [	DW 0]
-00432e: 00 00
+004466: 00 00
 
 [	DW 0]
-004330: 00 00
+004468: 00 00
 
 [	DW 256]
-004332: 00 01
+00446a: 00 01
 
 [	DW 512]
-004334: 00 02
+00446c: 00 02
 
 [	DB 0X44]
-004336: 44
+00446e: 44
 
 [	DB 0]
-004337: 00
+00446f: 00
 
 [	DB 0B11000000]
-004338: c0
+004470: c0
 
 [HMMC_IMAGE1 ::]
-	global label address: 0x004339
+	global label address: 0x004471
 
 [	DW 0]
-004339: 00 00
+004471: 00 00
 
 [	DW 512]
-00433b: 00 02
+004473: 00 02
 
 [	DW 64]
-00433d: 40 00
+004475: 40 00
 
 [	DW 32]
-00433f: 20 00
+004477: 20 00
 
 [	DB 0]
-004341: 00
+004479: 00
 
 [	DB 0B11110000]
-004342: f0
+00447a: f0
 
 [	INCLUDE ".//image1.asm"] begin
 [	SCOPE GRAPHIC_PARTS]
 	Scope path: GRAPHIC_PARTS:
 
 [GRAPHIC_PARTS ::]
-	global label address: 0x004343
+	global label address: 0x00447b
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-004343: 00 00 00 11 11 00 00 00
+00447b: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-00434b: 00 00 00 11 11 00 00 00
+004483: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-004353: 00 00 00 11 11 00 00 00
+00448b: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-00435b: 00 00 00 11 11 00 00 00
+004493: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0X23 , 0X32 , 0X11 , 0X00 , 0X00]
-004363: 00 00 11 23 32 11 00 00
+00449b: 00 00 11 23 32 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0X57 , 0X75 , 0X11 , 0X00 , 0X00]
-00436b: 00 00 11 57 75 11 00 00
+0044a3: 00 00 11 57 75 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0X89 , 0X98 , 0X11 , 0X00 , 0X00]
-004373: 00 00 11 89 98 11 00 00
+0044ab: 00 00 11 89 98 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0XBD , 0XDB , 0X11 , 0X00 , 0X00]
-00437b: 00 00 11 bd db 11 00 00
+0044b3: 00 00 11 bd db 11 00 00
 
 [	DB 0X00 , 0X01 , 0X33 , 0X33 , 0X33 , 0X22 , 0X10 , 0X00]
-004383: 00 01 33 33 33 22 10 00
+0044bb: 00 01 33 33 33 22 10 00
 
 [	DB 0X00 , 0X01 , 0X77 , 0X77 , 0X77 , 0X55 , 0X10 , 0X00]
-00438b: 00 01 77 77 77 55 10 00
+0044c3: 00 01 77 77 77 55 10 00
 
 [	DB 0X00 , 0X01 , 0X99 , 0X99 , 0X99 , 0X88 , 0X10 , 0X00]
-004393: 00 01 99 99 99 88 10 00
+0044cb: 00 01 99 99 99 88 10 00
 
 [	DB 0X00 , 0X01 , 0XDD , 0XDD , 0XDD , 0XBB , 0X10 , 0X00]
-00439b: 00 01 dd dd dd bb 10 00
+0044d3: 00 01 dd dd dd bb 10 00
 
 [	DB 0X00 , 0X13 , 0XFF , 0X33 , 0X33 , 0X22 , 0XC1 , 0X00]
-0043a3: 00 13 ff 33 33 22 c1 00
+0044db: 00 13 ff 33 33 22 c1 00
 
 [	DB 0X00 , 0X17 , 0XFF , 0X77 , 0X77 , 0X55 , 0X41 , 0X00]
-0043ab: 00 17 ff 77 77 55 41 00
+0044e3: 00 17 ff 77 77 55 41 00
 
 [	DB 0X00 , 0X19 , 0XFF , 0X99 , 0X99 , 0X88 , 0X61 , 0X00]
-0043b3: 00 19 ff 99 99 88 61 00
+0044eb: 00 19 ff 99 99 88 61 00
 
 [	DB 0X00 , 0X1D , 0XFF , 0XDD , 0XDD , 0XBB , 0XA1 , 0X00]
-0043bb: 00 1d ff dd dd bb a1 00
+0044f3: 00 1d ff dd dd bb a1 00
 
 [	DB 0X01 , 0X23 , 0XFF , 0X33 , 0X33 , 0X32 , 0X2C , 0X10]
-0043c3: 01 23 ff 33 33 32 2c 10
+0044fb: 01 23 ff 33 33 32 2c 10
 
 [	DB 0X01 , 0X57 , 0XFF , 0X77 , 0X77 , 0X75 , 0X54 , 0X10]
-0043cb: 01 57 ff 77 77 75 54 10
+004503: 01 57 ff 77 77 75 54 10
 
 [	DB 0X01 , 0X89 , 0XFF , 0X99 , 0X99 , 0X98 , 0X86 , 0X10]
-0043d3: 01 89 ff 99 99 98 86 10
+00450b: 01 89 ff 99 99 98 86 10
 
 [	DB 0X01 , 0XBD , 0XFF , 0XDD , 0XDD , 0XDB , 0XBA , 0X10]
-0043db: 01 bd ff dd dd db ba 10
+004513: 01 bd ff dd dd db ba 10
 
 [	DB 0X01 , 0X33 , 0X33 , 0X33 , 0X33 , 0X32 , 0X2C , 0X10]
-0043e3: 01 33 33 33 33 32 2c 10
+00451b: 01 33 33 33 33 32 2c 10
 
 [	DB 0X01 , 0X77 , 0X77 , 0X77 , 0X77 , 0X75 , 0X54 , 0X10]
-0043eb: 01 77 77 77 77 75 54 10
+004523: 01 77 77 77 77 75 54 10
 
 [	DB 0X01 , 0X99 , 0X99 , 0X99 , 0X99 , 0X98 , 0X86 , 0X10]
-0043f3: 01 99 99 99 99 98 86 10
+00452b: 01 99 99 99 99 98 86 10
 
 [	DB 0X01 , 0XDD , 0XDD , 0XDD , 0XDD , 0XDB , 0XBA , 0X10]
-0043fb: 01 dd dd dd dd db ba 10
+004533: 01 dd dd dd dd db ba 10
 
 [	DB 0X12 , 0X3F , 0X33 , 0X33 , 0X33 , 0X32 , 0X2C , 0XC1]
-004403: 12 3f 33 33 33 32 2c c1
+00453b: 12 3f 33 33 33 32 2c c1
 
 [	DB 0X15 , 0X7F , 0X77 , 0X77 , 0X77 , 0X75 , 0X54 , 0X41]
-00440b: 15 7f 77 77 77 75 54 41
+004543: 15 7f 77 77 77 75 54 41
 
 [	DB 0X18 , 0X9F , 0X99 , 0X99 , 0X99 , 0X98 , 0X86 , 0X61]
-004413: 18 9f 99 99 99 98 86 61
+00454b: 18 9f 99 99 99 98 86 61
 
 [	DB 0X1B , 0XDF , 0XDD , 0XDD , 0XDD , 0XDB , 0XBA , 0XA1]
-00441b: 1b df dd dd dd db ba a1
+004553: 1b df dd dd dd db ba a1
 
 [	DB 0X12 , 0X33 , 0X33 , 0X33 , 0X33 , 0X22 , 0X2C , 0XC1]
-004423: 12 33 33 33 33 22 2c c1
+00455b: 12 33 33 33 33 22 2c c1
 
 [	DB 0X15 , 0X77 , 0X77 , 0X77 , 0X77 , 0X55 , 0X54 , 0X41]
-00442b: 15 77 77 77 77 55 54 41
+004563: 15 77 77 77 77 55 54 41
 
 [	DB 0X18 , 0X99 , 0X99 , 0X99 , 0X99 , 0X88 , 0X86 , 0X61]
-004433: 18 99 99 99 99 88 86 61
+00456b: 18 99 99 99 99 88 86 61
 
 [	DB 0X1B , 0XDD , 0XDD , 0XDD , 0XDD , 0XBB , 0XBA , 0XA1]
-00443b: 1b dd dd dd dd bb ba a1
+004573: 1b dd dd dd dd bb ba a1
 
 [	DB 0X12 , 0X23 , 0X33 , 0X33 , 0X32 , 0X22 , 0XCC , 0XC1]
-004443: 12 23 33 33 32 22 cc c1
+00457b: 12 23 33 33 32 22 cc c1
 
 [	DB 0X15 , 0X57 , 0X77 , 0X77 , 0X75 , 0X55 , 0X44 , 0X41]
-00444b: 15 57 77 77 75 55 44 41
+004583: 15 57 77 77 75 55 44 41
 
 [	DB 0X18 , 0X89 , 0X99 , 0X99 , 0X98 , 0X88 , 0X66 , 0X61]
-004453: 18 89 99 99 98 88 66 61
+00458b: 18 89 99 99 98 88 66 61
 
 [	DB 0X1B , 0XBD , 0XDD , 0XDD , 0XDB , 0XBB , 0XAA , 0XA1]
-00445b: 1b bd dd dd db bb aa a1
+004593: 1b bd dd dd db bb aa a1
 
 [	DB 0X12 , 0X22 , 0X23 , 0X33 , 0X22 , 0X22 , 0XCC , 0XC1]
-004463: 12 22 23 33 22 22 cc c1
+00459b: 12 22 23 33 22 22 cc c1
 
 [	DB 0X15 , 0X55 , 0X57 , 0X77 , 0X55 , 0X55 , 0X44 , 0X41]
-00446b: 15 55 57 77 55 55 44 41
+0045a3: 15 55 57 77 55 55 44 41
 
 [	DB 0X18 , 0X88 , 0X89 , 0X99 , 0X88 , 0X88 , 0X66 , 0X61]
-004473: 18 88 89 99 88 88 66 61
+0045ab: 18 88 89 99 88 88 66 61
 
 [	DB 0X1B , 0XBB , 0XBD , 0XDD , 0XBB , 0XBB , 0XAA , 0XA1]
-00447b: 1b bb bd dd bb bb aa a1
+0045b3: 1b bb bd dd bb bb aa a1
 
 [	DB 0X01 , 0X22 , 0X22 , 0X22 , 0X22 , 0X2C , 0XCC , 0X10]
-004483: 01 22 22 22 22 2c cc 10
+0045bb: 01 22 22 22 22 2c cc 10
 
 [	DB 0X01 , 0X55 , 0X55 , 0X55 , 0X55 , 0X54 , 0X44 , 0X10]
-00448b: 01 55 55 55 55 54 44 10
+0045c3: 01 55 55 55 55 54 44 10
 
 [	DB 0X01 , 0X88 , 0X88 , 0X88 , 0X88 , 0X86 , 0X66 , 0X10]
-004493: 01 88 88 88 88 86 66 10
+0045cb: 01 88 88 88 88 86 66 10
 
 [	DB 0X01 , 0XBB , 0XBB , 0XBB , 0XBB , 0XBA , 0XAA , 0X10]
-00449b: 01 bb bb bb bb ba aa 10
+0045d3: 01 bb bb bb bb ba aa 10
 
 [	DB 0X01 , 0XC2 , 0X22 , 0X22 , 0X22 , 0XCC , 0XCC , 0X10]
-0044a3: 01 c2 22 22 22 cc cc 10
+0045db: 01 c2 22 22 22 cc cc 10
 
 [	DB 0X01 , 0X45 , 0X55 , 0X55 , 0X55 , 0X44 , 0X44 , 0X10]
-0044ab: 01 45 55 55 55 44 44 10
+0045e3: 01 45 55 55 55 44 44 10
 
 [	DB 0X01 , 0X68 , 0X88 , 0X88 , 0X88 , 0X66 , 0X66 , 0X10]
-0044b3: 01 68 88 88 88 66 66 10
+0045eb: 01 68 88 88 88 66 66 10
 
 [	DB 0X01 , 0XAB , 0XBB , 0XBB , 0XBB , 0XAA , 0XAA , 0X10]
-0044bb: 01 ab bb bb bb aa aa 10
+0045f3: 01 ab bb bb bb aa aa 10
 
 [	DB 0X00 , 0X1C , 0XC2 , 0X22 , 0XCC , 0XCC , 0XC1 , 0X00]
-0044c3: 00 1c c2 22 cc cc c1 00
+0045fb: 00 1c c2 22 cc cc c1 00
 
 [	DB 0X00 , 0X14 , 0X45 , 0X55 , 0X44 , 0X44 , 0X41 , 0X00]
-0044cb: 00 14 45 55 44 44 41 00
+004603: 00 14 45 55 44 44 41 00
 
 [	DB 0X00 , 0X16 , 0X68 , 0X88 , 0X66 , 0X66 , 0X61 , 0X00]
-0044d3: 00 16 68 88 66 66 61 00
+00460b: 00 16 68 88 66 66 61 00
 
 [	DB 0X00 , 0X1A , 0XAB , 0XBB , 0XAA , 0XAA , 0XA1 , 0X00]
-0044db: 00 1a ab bb aa aa a1 00
+004613: 00 1a ab bb aa aa a1 00
 
 [	DB 0X00 , 0X01 , 0XCC , 0XCC , 0XCC , 0XCC , 0X10 , 0X00]
-0044e3: 00 01 cc cc cc cc 10 00
+00461b: 00 01 cc cc cc cc 10 00
 
 [	DB 0X00 , 0X01 , 0X44 , 0X44 , 0X44 , 0X44 , 0X10 , 0X00]
-0044eb: 00 01 44 44 44 44 10 00
+004623: 00 01 44 44 44 44 10 00
 
 [	DB 0X00 , 0X01 , 0X66 , 0X66 , 0X66 , 0X66 , 0X10 , 0X00]
-0044f3: 00 01 66 66 66 66 10 00
+00462b: 00 01 66 66 66 66 10 00
 
 [	DB 0X00 , 0X01 , 0XAA , 0XAA , 0XAA , 0XAA , 0X10 , 0X00]
-0044fb: 00 01 aa aa aa aa 10 00
+004633: 00 01 aa aa aa aa 10 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0XCC , 0XCC , 0X11 , 0X00 , 0X00]
-004503: 00 00 11 cc cc 11 00 00
+00463b: 00 00 11 cc cc 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0X44 , 0X44 , 0X11 , 0X00 , 0X00]
-00450b: 00 00 11 44 44 11 00 00
+004643: 00 00 11 44 44 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0X66 , 0X66 , 0X11 , 0X00 , 0X00]
-004513: 00 00 11 66 66 11 00 00
+00464b: 00 00 11 66 66 11 00 00
 
 [	DB 0X00 , 0X00 , 0X11 , 0XAA , 0XAA , 0X11 , 0X00 , 0X00]
-00451b: 00 00 11 aa aa 11 00 00
+004653: 00 00 11 aa aa 11 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-004523: 00 00 00 11 11 00 00 00
+00465b: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-00452b: 00 00 00 11 11 00 00 00
+004663: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-004533: 00 00 00 11 11 00 00 00
+00466b: 00 00 00 11 11 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X11 , 0X11 , 0X00 , 0X00 , 0X00]
-00453b: 00 00 00 11 11 00 00 00
+004673: 00 00 00 11 11 00 00 00
 
 [	DB 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD]
-004543: dd dd dd dd dd dd dd dd
+00467b: dd dd dd dd dd dd dd dd
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00454b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004553: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00455b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDB , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XBD]
-004563: dd db dd dd dd dd dd bd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00456b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004573: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00457b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDB , 0XDD , 0XDB , 0XAA , 0XAA , 0XBD , 0XDD , 0XDD]
-004583: db dd db aa aa bd dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00458b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004593: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00459b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDD , 0XBA , 0XAB , 0XAB , 0XBB , 0XDB , 0XDD]
-0045a3: dd dd ba ab ab bb db dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045ab: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045b3: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045bb: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDB , 0XAA , 0XBB , 0XBB , 0XBD , 0XBD , 0XBD]
-0045c3: dd db aa bb bb bd bd bd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045cb: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045d3: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045db: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDA , 0XAB , 0XBB , 0XDB , 0XDB , 0XDD , 0XDD]
-0045e3: dd da ab bb db db dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045eb: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045f3: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0045fb: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDA , 0XBA , 0XBB , 0XBD , 0XDD , 0XDD , 0XDD]
-004603: dd da ba bb bd dd dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00460b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004613: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00461b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDA , 0XAB , 0XBB , 0XDD , 0XDB , 0XDD , 0XDD]
-004623: dd da ab bb dd db dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00462b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004633: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00463b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDB , 0XDA , 0XBB , 0XBD , 0XBD , 0XDD , 0XDD , 0XDD]
-004643: db da bb bd bd dd dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00464b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004653: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00465b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDB , 0XAB , 0XBB , 0XDD , 0XDD , 0XDD , 0XDD]
-004663: dd db ab bb dd dd dd dd
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00466b: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-004673: 00 00 00 00 00 00 00 00
-
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00467b: 00 00 00 00 00 00 00 00
-
-[	DB 0XDD , 0XDD , 0XAB , 0XBD , 0XBD , 0XDD , 0XDB , 0XDD]
-004683: dd dd ab bd bd dd db dd
+004683: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 00468b: 00 00 00 00 00 00 00 00
@@ -1658,11 +1865,11 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 004693: 00 00 00 00 00 00 00 00
 
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00469b: 00 00 00 00 00 00 00 00
+[	DB 0XDD , 0XDB , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XBD]
+00469b: dd db dd dd dd dd dd bd
 
-[	DB 0XDD , 0XDD , 0XBB , 0XBB , 0XDB , 0XDD , 0XDD , 0XDD]
-0046a3: dd dd bb bb db dd dd dd
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0046a3: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046ab: 00 00 00 00 00 00 00 00
@@ -1670,11 +1877,11 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046b3: 00 00 00 00 00 00 00 00
 
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0046bb: 00 00 00 00 00 00 00 00
+[	DB 0XDB , 0XDD , 0XDB , 0XAA , 0XAA , 0XBD , 0XDD , 0XDD]
+0046bb: db dd db aa aa bd dd dd
 
-[	DB 0XDB , 0XDD , 0XDB , 0XBB , 0XBD , 0XBD , 0XDD , 0XDD]
-0046c3: db dd db bb bd bd dd dd
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0046c3: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046cb: 00 00 00 00 00 00 00 00
@@ -1682,11 +1889,11 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046d3: 00 00 00 00 00 00 00 00
 
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0046db: 00 00 00 00 00 00 00 00
+[	DB 0XDD , 0XDD , 0XBA , 0XAB , 0XAB , 0XBB , 0XDB , 0XDD]
+0046db: dd dd ba ab ab bb db dd
 
-[	DB 0XDD , 0XDB , 0XDD , 0XBB , 0XBB , 0XDB , 0XDD , 0XDD]
-0046e3: dd db dd bb bb db dd dd
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0046e3: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046eb: 00 00 00 00 00 00 00 00
@@ -1694,11 +1901,11 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 0046f3: 00 00 00 00 00 00 00 00
 
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-0046fb: 00 00 00 00 00 00 00 00
+[	DB 0XDD , 0XDB , 0XAA , 0XBB , 0XBB , 0XBD , 0XBD , 0XBD]
+0046fb: dd db aa bb bb bd bd bd
 
-[	DB 0XDB , 0XDD , 0XDD , 0XDD , 0XBB , 0XBB , 0XBD , 0XBD]
-004703: db dd dd dd bb bb bd bd
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004703: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 00470b: 00 00 00 00 00 00 00 00
@@ -1706,11 +1913,11 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 004713: 00 00 00 00 00 00 00 00
 
-[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00471b: 00 00 00 00 00 00 00 00
+[	DB 0XDD , 0XDA , 0XAB , 0XBB , 0XDB , 0XDB , 0XDD , 0XDD]
+00471b: dd da ab bb db db dd dd
 
-[	DB 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD]
-004723: dd dd dd dd dd dd dd dd
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004723: 00 00 00 00 00 00 00 00
 
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 00472b: 00 00 00 00 00 00 00 00
@@ -1718,8 +1925,125 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
 004733: 00 00 00 00 00 00 00 00
 
+[	DB 0XDD , 0XDA , 0XBA , 0XBB , 0XBD , 0XDD , 0XDD , 0XDD]
+00473b: dd da ba bb bd dd dd dd
+
 [	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
-00473b: 00 00 00 00 00 00 00 00
+004743: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00474b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004753: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDA , 0XAB , 0XBB , 0XDD , 0XDB , 0XDD , 0XDD]
+00475b: dd da ab bb dd db dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004763: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00476b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004773: 00 00 00 00 00 00 00 00
+
+[	DB 0XDB , 0XDA , 0XBB , 0XBD , 0XBD , 0XDD , 0XDD , 0XDD]
+00477b: db da bb bd bd dd dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004783: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00478b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004793: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDB , 0XAB , 0XBB , 0XDD , 0XDD , 0XDD , 0XDD]
+00479b: dd db ab bb dd dd dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047a3: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047ab: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047b3: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDD , 0XAB , 0XBD , 0XBD , 0XDD , 0XDB , 0XDD]
+0047bb: dd dd ab bd bd dd db dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047c3: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047cb: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047d3: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDD , 0XBB , 0XBB , 0XDB , 0XDD , 0XDD , 0XDD]
+0047db: dd dd bb bb db dd dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047e3: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047eb: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+0047f3: 00 00 00 00 00 00 00 00
+
+[	DB 0XDB , 0XDD , 0XDB , 0XBB , 0XBD , 0XBD , 0XDD , 0XDD]
+0047fb: db dd db bb bd bd dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004803: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00480b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004813: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDB , 0XDD , 0XBB , 0XBB , 0XDB , 0XDD , 0XDD]
+00481b: dd db dd bb bb db dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004823: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00482b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004833: 00 00 00 00 00 00 00 00
+
+[	DB 0XDB , 0XDD , 0XDD , 0XDD , 0XBB , 0XBB , 0XBD , 0XBD]
+00483b: db dd dd dd bb bb bd bd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004843: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00484b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004853: 00 00 00 00 00 00 00 00
+
+[	DB 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD , 0XDD]
+00485b: dd dd dd dd dd dd dd dd
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004863: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+00486b: 00 00 00 00 00 00 00 00
+
+[	DB 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00 , 0X00]
+004873: 00 00 00 00 00 00 00 00
 
 [	ENDSCOPE]
 	Scope path: 
@@ -1727,127 +2051,127 @@ Define macro {PALETTE MACRO VR , VG , VB}
 [	INCLUDE ".//image1.asm"] end
 
 [HMMM_HTRANS ::]
-	global label address: 0x004743
+	global label address: 0x00487b
 
 [	DW 0]
-004743: 00 00
+00487b: 00 00
 
 [	DW 512 + 16]
-004745: 10 02
+00487d: 10 02
 
 [	DW 16]
-004747: 10 00
+00487f: 10 00
 
 [	DW 512 + 16]
-004749: 10 02
+004881: 10 02
 
 [	DW 256 - 16]
-00474b: f0 00
+004883: f0 00
 
 [	DW 16]
-00474d: 10 00
+004885: 10 00
 
 [	DB 0]
-00474f: 00
+004887: 00
 
 [	DB 0]
-004750: 00
+004888: 00
 
 [	DB 0B11010000]
-004751: d0
+004889: d0
 
 [YMMM_VTRANS ::]
-	global label address: 0x004752
+	global label address: 0x00488a
 
 [	DW 0]
-004752: 00 00
+00488a: 00 00
 
 [	DW 512 + 16]
-004754: 10 02
+00488c: 10 02
 
 [	DW 0]
-004756: 00 00
+00488e: 00 00
 
 [	DW 512 + 32]
-004758: 20 02
+004890: 20 02
 
 [	DW 256]
-00475a: 00 01
+004892: 00 01
 
 [	DW 128 - 16]
-00475c: 70 00
+004894: 70 00
 
 [	DB 0]
-00475e: 00
+004896: 00
 
 [	DB 0]
-00475f: 00
+004897: 00
 
 [	DB 0B11100000]
-004760: e0
+004898: e0
 
 [YMMM_PAGE0 ::]
-	global label address: 0x004761
+	global label address: 0x004899
 
 [	DW 0]
-004761: 00 00
+004899: 00 00
 
 [	DW 512 + 16]
-004763: 10 02
+00489b: 10 02
 
 [	DW 0]
-004765: 00 00
+00489d: 00 00
 
 [	DW 0 + 16]
-004767: 10 00
+00489f: 10 00
 
 [	DW 256]
-004769: 00 01
+0048a1: 00 01
 
 [	DW 128]
-00476b: 80 00
+0048a3: 80 00
 
 [	DB 0]
-00476d: 00
+0048a5: 00
 
 [	DB 0]
-00476e: 00
+0048a6: 00
 
 [	DB 0B11100000]
-00476f: e0
+0048a7: e0
 
 [YMMM_PAGE1 ::]
-	global label address: 0x004770
+	global label address: 0x0048a8
 
 [	DW 0]
-004770: 00 00
+0048a8: 00 00
 
 [	DW 512 + 16]
-004772: 10 02
+0048aa: 10 02
 
 [	DW 0]
-004774: 00 00
+0048ac: 00 00
 
 [	DW 256 + 16]
-004776: 10 01
+0048ae: 10 01
 
 [	DW 256]
-004778: 00 01
+0048b0: 00 01
 
 [	DW 128]
-00477a: 80 00
+0048b2: 80 00
 
 [	DB 0]
-00477c: 00
+0048b4: 00
 
 [	DB 0]
-00477d: 00
+0048b5: 00
 
 [	DB 0B11100000]
-00477e: e0
+0048b6: e0
 
 [ALIGN 16384]
-	Padding: 14465byte(s)
+	Padding: 14153byte(s)
 
 << label >>
 BAKCLR 62442 ( 0xf3ea )
@@ -1860,39 +2184,39 @@ DRAW_PAGE 49152 ( 0xc000 )
 ENASLT 36 ( 0x24 )
 ENTRY 16400 ( 0x4010 )
 ENTRY:MAIN_LOOP 16493 ( 0x406d )
-ENTRY:SKIP_BALL 16849 ( 0x41d1 )
+ENTRY:SKIP_BALL 17161 ( 0x4309 )
 ENTRY:WAIT_VSYNC 16497 ( 0x4071 )
-ERASE_BALL 17075 ( 0x42b3 )
-ERASE_BALL:HMMM_COPY 17124 ( 0x42e4 )
+ERASE_BALL 17387 ( 0x43eb )
+ERASE_BALL:HMMM_COPY 17436 ( 0x441c )
 EXPTBL 64705 ( 0xfcc1 )
 FILVRM 86 ( 0x56 )
 FORCLR 62441 ( 0xf3e9 )
-GRAPHIC_PARTS 17219 ( 0x4343 )
-HMMC_IMAGE1 17209 ( 0x4339 )
-HMMM_HTRANS 18243 ( 0x4743 )
-HMMV_CLEAR 17194 ( 0x432a )
+GRAPHIC_PARTS 17531 ( 0x447b )
+HMMC_IMAGE1 17521 ( 0x4471 )
+HMMM_HTRANS 18555 ( 0x487b )
+HMMV_CLEAR 17506 ( 0x4462 )
 H_KEYI 64922 ( 0xfd9a )
-H_KEYI_INTERRUPT 16863 ( 0x41df )
-INITIAL_PALETTE 17162 ( 0x430a )
+H_KEYI_INTERRUPT 17175 ( 0x4317 )
+INITIAL_PALETTE 17474 ( 0x4442 )
 JIFFY 64670 ( 0xfc9e )
 LDIRVM 92 ( 0x5c )
-MAKEUP_BACKGROUND 16875 ( 0x41eb )
+MAKEUP_BACKGROUND 17187 ( 0x4323 )
 PPI_SLOT_SEL 168 ( 0xa8 )
-PUT_BALL 17015 ( 0x4277 )
-PUT_BALL:LMMM_TPSET 17064 ( 0x42a8 )
+PUT_BALL 17327 ( 0x43af )
+PUT_BALL:LMMM_TPSET 17376 ( 0x43e0 )
 RG1SAV 62432 ( 0xf3e0 )
 RG8SAV 65511 ( 0xffe7 )
 RG9SAV 65512 ( 0xffe8 )
-SET_PALETTE 16921 ( 0x4219 )
+SET_PALETTE 17233 ( 0x4351 )
 SLTTBL 64709 ( 0xfcc5 )
-VDP_COMMAND 16999 ( 0x4267 )
-VDP_COMMAND_HMMC 16936 ( 0x4228 )
-VDP_COMMAND_HMMC:LOOP 16990 ( 0x425e )
+VDP_COMMAND 17311 ( 0x439f )
+VDP_COMMAND_HMMC 17248 ( 0x4360 )
+VDP_COMMAND_HMMC:LOOP 17302 ( 0x4396 )
 VDP_PORT0 152 ( 0x98 )
 VDP_PORT1 153 ( 0x99 )
 VDP_PORT2 154 ( 0x9a )
 VDP_PORT3 155 ( 0x9b )
-WAIT_COMPLETE_VDP_COMMAND 17134 ( 0x42ee )
-YMMM_PAGE0 18273 ( 0x4761 )
-YMMM_PAGE1 18288 ( 0x4770 )
-YMMM_VTRANS 18258 ( 0x4752 )
+WAIT_COMPLETE_VDP_COMMAND 17446 ( 0x4426 )
+YMMM_PAGE0 18585 ( 0x4899 )
+YMMM_PAGE1 18600 ( 0x48a8 )
+YMMM_VTRANS 18570 ( 0x488a )

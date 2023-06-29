@@ -179,6 +179,66 @@ entry::
 			ld			d, 176
 			call		erase_ball
 
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 192
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 208
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 224
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 240
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 24
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 40
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 56
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 72
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 88
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 104
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 120
+			call		erase_ball
+
+			call		wait_complete_vdp_command
+			ld			de, [ball_y_d2]
+			ld			d, 136
+			call		erase_ball
+
 			; É{Å[ÉãÇï\é¶Ç∑ÇÈ ---------------------------------------
 			call		wait_complete_vdp_command
 			ld			b, 0
@@ -250,6 +310,78 @@ entry::
 			ld			b, 48
 			ld			de, [ball_y]
 			ld			d, 176
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 32
+			ld			de, [ball_y]
+			ld			d, 192
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 32
+			ld			de, [ball_y]
+			ld			d, 208
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 48
+			ld			de, [ball_y]
+			ld			d, 224
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 48
+			ld			de, [ball_y]
+			ld			d, 240
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 48
+			ld			de, [ball_y]
+			ld			d, 24
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 0
+			ld			de, [ball_y]
+			ld			d, 40
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 16
+			ld			de, [ball_y]
+			ld			d, 56
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 32
+			ld			de, [ball_y]
+			ld			d, 72
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 48
+			ld			de, [ball_y]
+			ld			d, 88
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 0
+			ld			de, [ball_y]
+			ld			d, 104
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 16
+			ld			de, [ball_y]
+			ld			d, 120
+			call		put_ball
+
+			call		wait_complete_vdp_command
+			ld			b, 32
+			ld			de, [ball_y]
+			ld			d, 136
 			call		put_ball
 
 			ld			a, [ball_y_d1]
